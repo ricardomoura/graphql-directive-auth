@@ -35,6 +35,8 @@ module.exports = appSecret =>
         const user = authenticate(context, appSecret);
         const role = this.args.role;
 
+        console.log(user);
+
         if (!user.role) {
           throw new Error(`Invalid token payload!`);
         }
