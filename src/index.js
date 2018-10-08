@@ -6,6 +6,6 @@ const hasRole = require('./hasRole');
 module.exports = {
   isAuthenticated,
   hasRole,
-  isAdmin
+  isAdmin,
   isCustomer,
 };
