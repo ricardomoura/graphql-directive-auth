@@ -47,7 +47,7 @@ module.exports = appSecret =>
           return null;
         } else if (!hasRole) {
           throw new Error(
-            `Must have role: ${role}, you have role: ${user.role}`
+            `No Access Level`
           );
         }
 
