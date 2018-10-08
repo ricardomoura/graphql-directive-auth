@@ -9,11 +9,9 @@ class AuthError extends Error {
 }
 
 const authenticate = (context, secret) => {
-  const authorization = context.req.get('Authorization');
+  const token = context.req.token;
 
-  if (authorization) {
-    const token = authorization.replace('Bearer ', '');
-
+  if (token) {
     try {
       return jwt.verify(token, secret);
     } catch (e) {
